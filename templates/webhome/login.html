@@ -1,8 +1,5 @@
 {% extends "webhome/base.html" %}
 {% load static %}
-
-
-
 {% block content %}
 
     <!--Hero Section-->
@@ -61,7 +58,7 @@
                                     <li>Track new orders</li>
                                     <li>Save items to your Wishlist</li>
                                 </ul>
-                                <a href="#" class="btn btn-bold">Create an account</a>
+                                <a href="{% url 'register' %}" class="btn btn-bold">Create an account</a>
                             </div>
                         </div>
                     </div>
