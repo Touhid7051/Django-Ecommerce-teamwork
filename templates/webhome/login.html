@@ -31,7 +31,7 @@
                     <!--Form Sign In-->
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="signin-container">
-                            <form  name="frm-login" method="post">
+                            <form name="frm-login" method="post">
                                 {% csrf_token %}
                                 <br>
                                 <p class="form-row">
@@ -71,7 +71,7 @@
                                     <li>Track new orders</li>
                                     <li>Save items to your Wishlist</li>
                                 </ul>
-                                <a href="#" class="btn btn-bold">Create an account</a>
+                                <a href="{% url 'register' %}" class="btn btn-bold">Create an account</a>
                             </div>
                         </div>
                     </div>
@@ -84,4 +84,3 @@
 
     </div>
 {% endblock %}
-

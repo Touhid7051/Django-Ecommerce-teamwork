@@ -35,21 +35,26 @@
                         </li>
                         {% if user.is_authenticated %}
 
-                            <li><i class="biolife-icon icon-login m-0"></i>
+                            <li>
 
+                            <a href="{% url 'logout' %}" class="login-link">
+                                <i class="biolife-icon icon-login">
 
-
-                            <a href="{% url 'logout' %}" class="login-link"><i class="biolife-icon icon-login"></i>{{ user.first_name }} Logout</a>
-
-
-
+                                </i>{{ user.username }} Logout
+                            </a>
 
                             </li>
 
-                        {% else %}
-                        <li><a href="{% url 'login' %}" class="login-link"><i class="biolife-icon icon-login"></i>Login/Register</a></li>
+                            {% else %}
+                            <li>
+                                <a href="{% url 'login' %}" class="login-link">
+                                    <i class="biolife-icon icon-login">
 
-                        {% endif %} 
+                                    </i>Login/Register
+                                </a>
+                            </li>
+
+                        {% endif %}
                     </ul>
                 </div>
             </div>
